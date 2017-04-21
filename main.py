@@ -1,8 +1,8 @@
 import pygame, sys, random
 from pygame.locals import *
 
-WINDOWWIDTH = 1000
-WINDOWHEIGHT = 680
+WINDOWWIDTH = 1200
+WINDOWHEIGHT = 630
 TEXTCOLOR = (255, 255, 255)
 BACKGROUNDCOLOR = (0, 0, 0)
 FPS = 40
@@ -43,7 +43,7 @@ def drawText(text, font, surface, x, y):
 pygame.init()
 mainClock = pygame.time.Clock()
 windowSurface = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT))
-pygame.display.set_caption("dodger v1.9.6")
+pygame.display.set_caption("dodger v1.9.7")
 pygame.mouse.set_visible(False)
 
 # set up font
@@ -61,7 +61,7 @@ baddieImage = pygame.image.load('resources\\baddie.png')
 
 # show the "Start" screen
 drawText('Dodger', font, windowSurface, WINDOWWIDTH / 3 + 100, WINDOWHEIGHT / 3)
-drawText('Press any key to start the game', font1, windowSurface, WINDOWWIDTH / 3 - 30, WINDOWHEIGHT / 2 + 50)
+drawText('Press any key to start the game', font1, windowSurface, WINDOWWIDTH / 3 - 100, WINDOWHEIGHT / 2 + 50)
 pygame.display.update()
 waitForPlayerToPressKey()
 
@@ -169,7 +169,7 @@ while True:
 
         # Draw the score and the score
         drawText('score: %s' %(score), font1, windowSurface, 10, 10)
-        drawText('top scrore: %s' %(topScore), font1, windowSurface, 10, 40)
+        drawText('top score: %s' %(topScore), font1, windowSurface, 10, 40)
 
         # Draw the player's rectanger
         windowSurface.blit(playerImage, playerRect)
@@ -193,7 +193,7 @@ while True:
     gameOverSound.play()
 
     drawText('Game over', font, windowSurface, (WINDOWWIDTH / 3) + 30, (WINDOWHEIGHT / 3))
-    drawText('Press a key to play again!', font1, windowSurface, (WINDOWHEIGHT / 3) + 100, (WINDOWHEIGHT / 3) + 70)
+    drawText('Press a key to play again!', font1, windowSurface, (WINDOWHEIGHT / 3) + 125, (WINDOWHEIGHT / 3) + 90)
     pygame.display.update()
     waitForPlayerToPressKey()
 
