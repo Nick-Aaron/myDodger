@@ -5,6 +5,9 @@ You have to install [pygame](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pygame) 
 The code has been tested by pycharm on windows 10 system.😊 You can run this game by running main.py. <br>
 Or you can run the [exe](https://github.com/Nick-Aaron/myDodger/tree/master/release) file on windows.<br>
 ![](https://github.com/Nick-Aaron/myDodger/blob/master/game.png)<br>
+### How to play the game?<br>
+You move the player to avoid touching enemies using up, left, down, right key on keyboard or moving the mouse cursor!
+![](https://github.com/Nick-Aaron/myDodger/blob/master/key.jpg) or ![](https://github.com/Nick-Aaron/myDodger/blob/master/mouse.jpg)<br>
 Please enjoy it!<br>
  :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: :satisfied: <br>
 The original code comes from this website:[inventwithpython](http://inventwithpython.com/chapters/).
