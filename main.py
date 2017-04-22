@@ -85,7 +85,7 @@ while True:
 
             if event.type == KEYDOWN:
                 if event.key == ord('z'):
-                    reviseCheat = True
+                    reverseCheat = True
                 if event.key == ord('x'):
                     slowCheat = True
                 if event.key == K_LEFT or event.key == ord('a'):
@@ -103,7 +103,7 @@ while True:
 
             if event.type == KEYUP:
                 if event.key == ord('z'):
-                    reviseCheat = False
+                    reverseCheat = False
                     score = 0
                 if event.key == ord('x'):
                     slowCheat = False
