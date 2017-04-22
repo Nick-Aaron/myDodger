@@ -7,10 +7,10 @@ TEXTCOLOR = (255, 255, 255)
 BACKGROUNDCOLOR = (0, 0, 0)
 FPS = 40
 BADDIEMINSIZE = 10
-BADDIEMAXSIZE = 80
+BADDIEMAXSIZE = 120
 BADDIEMINSPEED = 1
-BADDIEMAXSPEED = 8
-ADDNEWBADDIERATE = 6
+BADDIEMAXSPEED = 11
+ADDNEWBADDIERATE = 8
 PLAYERMOVERATE = 5
 
 def terminate():
@@ -43,7 +43,7 @@ def drawText(text, font, surface, x, y):
 pygame.init()
 mainClock = pygame.time.Clock()
 windowSurface = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT))
-pygame.display.set_caption("dodger v1.9.7")
+pygame.display.set_caption("dodger v1.9.8")
 pygame.mouse.set_visible(False)
 
 # set up font
@@ -70,7 +70,7 @@ while True:
     # set up the start of the game
     baddies = []
     score = 0
-    playerRect.topleft = (WINDOWWIDTH - 2, WINDOWHEIGHT - 50)
+    playerRect.topleft = (WINDOWWIDTH / 2 - 20, WINDOWHEIGHT - 100)
     moveLeft = moveUp = moveRight = moveDown = False
     reverseCheat = slowCheat = False
     baddieAddCounter = 0
@@ -167,16 +167,16 @@ while True:
         # Draw the game world on the window
         windowSurface.fill(BACKGROUNDCOLOR)
 
-        # Draw the score and the score
-        drawText('score: %s' %(score), font1, windowSurface, 10, 10)
-        drawText('top score: %s' %(topScore), font1, windowSurface, 10, 40)
-
         # Draw the player's rectanger
         windowSurface.blit(playerImage, playerRect)
 
         # Draw each baddie
         for b in baddies[:]:
             windowSurface.blit(b['surface'], b['rect'])
+
+        # Draw the score and the score
+        drawText('score: %s' %(score), font1, windowSurface, 10, 10)
+        drawText('top score: %s' %(topScore), font1, windowSurface, 10, 40)
 
         pygame.display.update()
 
